@@ -1,0 +1,71 @@
+\documentclass[14pt]{extarticle}
+% Santiago I. Sordo Palacios
+
+% Page sizing 
+\usepackage[margin=1in]{geometry}
+
+% References
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+} % Create a click-able TOC
+
+% Sections
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage} % New page at end of section
+\setcounter{tocdepth}{2} % Only show section and subsection in TOC
+\setcounter{secnumdepth}{4} % Set the depth possible in sections
+
+% Paragraphs
+\usepackage{parskip}
+\setlength{\parindent}{0pt} % Decrease space skipped after paragraph
+
+% Text formatting
+\usepackage{ulem} % Allow for colors in text
+
+% Bullet points
+\usepackage{enumitem}
+\setlist{nosep} % Decrease space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$} % Use small bullets
+
+% Math
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{thmtools} % Allows for manipulating solution style
+\usepackage{xcolor} % Allows for color in solutions
+
+%% Solution environment 
+% Makes solutions blue which is nice
+\declaretheoremstyle[
+  bodyfont=\color{blue}\normalfont,
+]{colored}
+
+\declaretheorem[
+  style=colored,
+  name=Solution,
+  numbered=no,
+]{solution}
+
+%% Define useful commands
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+
+% Algorithms
+\usepackage{algorithmicx} % Create pseudocode environments
+\usepackage{algpseudocode} % Helper for pseudocode environments
+
+% Tables
+\usepackage{longtable} % Make tables that span multiple pages
+
+% Figures
+\usepackage{graphicx} % Include .png/.pdf file
+\usepackage{float} % Allow for forced figure placement, `H'
+
+% Graphs
+\usepackage{tikz} % Draw graphs
+\usetikzlibrary{arrows.meta} % Use pointy arrows
